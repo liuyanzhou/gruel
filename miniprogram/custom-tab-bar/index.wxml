@@ -1,0 +1,15 @@
+<view class="cu-bar tabbar margin-bottom-xl bg-white">
+  <view class="action {{curIndex == 1 ? 'navActive':'' }}" bindtap="togger" data-index='1' data-src="/pages/team/team"
+   >
+    <view class="cuIcon-homefill"></view> 组队
+  </view>
+  <view class="action add-action {{curIndex == 2 ? 'navActive':'' }}" bindtap="togger"  data-index='2' data-src="/pages/index/index" >
+    <view class="cuIcon-calendar"></view> 
+    课表
+  </view>
+  <view class="action {{curIndex == 3 ? 'navActive':'' }}" bindtap="togger"  data-index='3' data-src="/pages/my/my" 
+   >
+    <view class="cuIcon-my"></view>
+    我的
+  </view>
+</view>

@@ -1,0 +1,80 @@
+ @import "../../colorui/animation.wxss";
+
+image[class*="gif-"] {
+  border-radius: 6rpx;
+  display: block; 
+}
+page {
+  height: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 50px;
+    background: #26BC5F;
+  }
+
+.team-container {
+  height: 800rpx;
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 730rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, .3);
+}
+
+.header  {
+  width: 750rpx;
+  height: 400rpx;
+  max-height: 400rpx;
+  position: relative;
+}
+
+.avatar-box {
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.avatar-box view {
+  width: 200rpx!important;
+  height: 200rpx!important;
+  border-radius: 50%;
+}
+
+.avatar-box .tubiao {
+  text-align: center;
+  font-size: 100rpx;
+  line-height: 200rpx;
+  color: #fff;
+  opacity: .5;
+}
+
+.avatar-box .shadow {
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, .3);
+}
+
+.avatar-box view:nth-of-type(3) {
+  margin-left: 0;
+  margin-right: 30rpx;
+}
+
+/* 右侧模态框 */
+.cu-modal {
+  margin-bottom: 50px;
+}
+
+/* 图片模态框 */
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between!important;
+}
+
+
+/* 图片模态框 */

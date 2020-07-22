@@ -1,0 +1,86 @@
+.cu-dialog {
+  border-radius: 25rpx 25rpx 0 0!important ;
+  margin-bottom: 100rpx;
+}
+.modalBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40rpx;
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 130rpx;
+}
+.modal-item {
+  width: 100%;
+  margin-bottom: 30rpx;
+  height: 60rpx;
+}
+ .modal-item  input {
+     height: 60rpx;
+ }
+
+.modalBox text::before {
+  padding-right: 20rpx;
+  font-size: 30rpx;
+}
+
+/* 选择编辑 */
+
+.edit-box {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+}
+
+.confirm {
+  width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  position: absolute;
+  top:150rpx;
+  opacity: 0;
+  right: -90px;
+  background: rgba(38, 188, 95, .9);
+  color: #fff;
+  animation-fill-mode:forwards;
+   animation-duration: 1s;
+   border-radius: 10rpx 0 0 10rpx;
+}
+
+@keyframes confirm-right-left {
+  0% {
+    opacity: 1;
+  }
+  100%  {
+    opacity: 1;
+    right:0;
+  }
+}
+
+@keyframes confirm-left-right {
+  0% {
+    opacity: 1;
+    right:0;
+  }
+  100%  {
+     opacity: 1;
+    right: -90px;
+  }
+}
+
+.modalBox input {
+  color: #ccc;
+}
+
+/* 删除 */
+.del-box {
+    width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  position: absolute;
+  top:150rpx;
+  right: 0px;
+  color: #fff;
+}

@@ -1,0 +1,137 @@
+@import "../../colorui/animation.wxss";
+
+image[class*="gif-"] {
+  border-radius: 6rpx;
+  display: block;
+}
+
+page {
+  height: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 50px;
+
+}
+
+
+.week-box {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.week-active {
+  background: #26BC5F;
+}
+.add-box {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50%;
+  text-align: center;
+  margin: 20rpx 30rpx 0 0;
+  background-color: rgba(38, 188, 95, .6);
+}
+
+scroll-view {
+  height:  calc(100rpx + env(safe-area-inset-bottom) / 2);
+}
+.week-content {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  height: 50px;
+  line-height:100rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.classContainer {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 70rpx;
+  padding-right: 10rpx;
+  position: relative;
+}
+
+.pitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  margin-top: 60rpx;
+  padding-top:10rpx; 
+  background: #f6f6f6;
+  position: absolute;
+  z-index: -99;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+}
+.pitch-sup {
+  flex: .5;
+}
+.pitch-item {
+  flex: 1;
+  width: 100%;
+  text-align: left;
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+}
+
+
+.class-item {
+  flex: 1;
+  height: 100%;
+  text-align: center;
+}
+
+.day-box {
+  height: 70rpx;
+  padding-top: 20rpx;
+}
+
+.day-item {
+  height: 35rpx;
+  line-height: 35rpx;
+  font-size: 24rpx;
+  color: #000;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.day-acive {
+  background-color: rgba(38, 188, 95, .6);
+  color: #fff;
+}
+
+
+.cart-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-size: 20rpx;
+  color: #fff;
+}
+.cart-item {
+  flex: 1;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 0;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  margin: 0 5rpx 5rpx 0;
+}
+
+/* 选择周数 */
+.cuIcon-back,
+.cuIcon-right  {
+  width: 70rpx;
+}

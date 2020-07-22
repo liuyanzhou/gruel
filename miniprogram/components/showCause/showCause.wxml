@@ -1,0 +1,79 @@
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}" catchtap="hideModal">
+<view class="cu-dialog" catchtap="stopHiden">
+  <view >
+    <view class="confirm"  style="animation-name:{{isEdit?'confirm-right-left':'confirm-left-right '  }}" catchtap="sendMessage" >
+       确认
+    </view>
+
+ <view class="edit-box">
+     <switch catchtap="changeEdit"></switch>
+  </view>
+    <view class="del-box bg-red"  catchtap="delClass"  wx:if="{{!isEdit}}">
+       删除
+    </view>
+  </view>
+  <view class="padding-xl modalBox" wx:if="{{!isEdit}}">
+      <!-- 地点 -->
+      <view class="flex modal-item text-red" >
+        <text class="cuIcon-locationfill lg "></text>
+        <view> {{place}}</view>
+      </view>
+       <!-- 地点 -->
+      <!-- 课程名 -->
+       <view class="flex modal-item text-blue">
+        <text class="cuIcon-read lg "></text>
+        <view> {{classname }}</view>
+      </view>
+       <!-- 课程名 -->
+       <!-- 老师 -->
+        <view class="flex modal-item text-black">
+        <text class="cuIcon-people  lg "></text>
+        <view> {{teacher }}</view>
+      </view>
+       <!-- 老师 -->
+      <!-- 周数 -->
+       <view class="flex modal-item text-pink" >
+        <text class="cuIcon-font lg "></text>
+        <view>{{ startWeek + '-' + endWeek + '' + ' '+  '周'   }}</view>
+      </view>
+      <!-- 周数 -->
+      <!-- 节数 -->
+        <view class="flex modal-item text-brown">
+        <text class="cuIcon-time  lg "></text>
+        <view> {{startsec}} - {{endsec}} 节 </view>
+      </view>
+  </view>
+  <!-- 切换后 -->
+    <view class="padding-xl modalBox" wx:else>
+      <!-- 地点 -->
+      <view class="flex modal-item text-red" >
+        <text class="cuIcon-locationfill lg "></text>
+        <input placeholder="请填写" ></input>
+      </view>
+       <!-- 地点 -->
+      <!-- 课程名 -->
+       <view class="flex modal-item text-blue">
+        <text class="cuIcon-read lg "></text>
+        <input placeholder="请填写" ></input>
+      </view>
+       <!-- 课程名 -->
+      <!-- 周数 -->
+       <view class="flex modal-item text-pink"  >
+        <text class="cuIcon-font lg "></text>
+    		<picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" header-text="选择起始-终止周数" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+			<view class="picker" style="color:{{isEdit?'#ccc':''}}">
+				{{multiArray[0][multiIndex[0]]}}-{{multiArray[1][multiIndex[1]]}} 周
+			</view>
+		</picker>
+      </view>
+      <!-- 周数 -->
+      <!-- 节数 -->
+        <view class="flex modal-item text-brown">
+        <text class="cuIcon-time  lg "></text>
+        <view> {{startsec}} - {{endsec}} 节 </view>
+      </view>
+  </view>
+</view>
+</view>
+

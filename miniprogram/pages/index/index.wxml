@@ -1,0 +1,76 @@
+
+<view class="week-box shadow bg-white">
+<view class="week-content ">
+  <text class="cuIcon-back  text-gray" bindtap="onPreWeek"></text>
+  <text>第{{curWeek}}周</text>
+  <text class="cuIcon-right  text-gray" bindtap="onNextWeek"></text>
+</view>
+<view class="add-box" style="color:#fff;" bindtap="toAddClass">
+  <text class="cuIcon-add lg "></text>
+</view>
+</view>
+
+<view class="classContainer" style="height:{{scrollHeight - 100}}px;">
+<view class="pitch">
+  <block wx:for="{{12}}" wx:key="index">
+    <view class="pitch-item">
+      {{index + 1}}
+    </view>
+  </block>
+</view>
+<block wx:for="{{classArr}}" wx:for-index="weekIndex"  wx:for-item="weekName" wx:key="weekIndex" >
+<view class="class-item ">
+    <view class="day-box" >
+          <view class="day-item {{weekIndex+1 == day ? 'day-acive' : ''}} ">{{weekName}}</view>
+    </view>
+    <view class="cart-box">
+    <!-- 每个框 -->
+      <view wx:for="{{course[weekIndex+1]}}" wx:key="index" 
+        class="cart-item" 
+        style="background-color:{{ item['className'] ? backgroudColor[arrIndex[weekIndex][index-1]] :'' }};"
+        data-weekName="{{weekIndex+1}}"
+        data-className="{{item['className']}}" 
+        data-place="{{item['place']}}" 
+        data-startSec="{{(index*2)-1}}" 
+        data-endSec="{{index*2}}" 
+        data-startWeek="{{item['startWeek']}}"
+        data-endWeek="{{item['endWeek']}}"
+        data-teacher="{{item['teacher']}}"
+        data-target="bottomModal"
+        bindtap="clickClass"
+        >
+          <block wx:if="{{ item['className']}}">
+          <view >{{item['className']}}</view>
+          <view>{{ item['place']}}</view>
+          </block>
+      </view>
+          <!-- 每个框 -->
+    </view>
+</view>
+</block>
+</view>
+
+<!-- 模态框 -->
+<l-showCause
+ classname="{{classname ? classname : '请填写'}}"
+ place="{{place ? place : '请填写'}}"
+ startsec="{{startsec}}"
+ endsec="{{endsec}}"
+ startWeek="{{startweek?startweek:'请填写'}}"
+ endWeek="{{endweek?endweek:''}}"
+ teacher="{{teacher?teacher : '请填写'}}"
+ multiIndex="{{multiIndex}}"
+ multiArray="{{multiArray}}"
+ modalName="{{modalName}}"
+ teachWeek="{{teachWeek}}"
+ bindsendMessage="sendMessage"
+ bindclearnClickInfo="clearnClickInfo"
+ binddelClass="delClass"
+   ></l-showCause>
+<!-- 显示课程编辑组件 -->
+
+
+
+
+<!-- loading组件 -->
+<l-loading loadModal="{{loadModal}}" ></l-loading>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-loading":"/components/loading/loading",
+    "l-showCause":"/components/showCause/showCause"
+  }
+}

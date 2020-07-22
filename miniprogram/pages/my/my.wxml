@@ -1,0 +1,26 @@
+<view class="profile-header">
+<view class="avatar-url">
+  <open-data type="userAvatarUrl"></open-data>
+</view>
+<open-data type="userNickName" class="nickname"></open-data>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    订阅
+  <switch catchtap="subscriptionInfo"  checked="{{isCheck}}" ></switch>
+  </view>
+</view>
+<view class="nav">
+  <view class="nav-item">
+    订阅次数
+    <button class="cu-btn round bg-green add" bindtap="addSubNum" >添加 {{subNum}} </button>
+  </view>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    发送
+  <button bindtap="sendMessage">发送</button>
+  </view>
+</view>

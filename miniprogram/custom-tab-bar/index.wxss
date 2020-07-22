@@ -1,0 +1,17 @@
+/* components/bottom/bottom.wxss */
+.cu-bar {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 0;
+  bottom: 0;
+  background: #fff;
+  color: #aaaaaa;
+  height: 50px!important;
+  border-top: 2rpx solid rgba(0, 0, 0, .1);
+   box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+
+.navActive {
+  color: #39b54a;
+}

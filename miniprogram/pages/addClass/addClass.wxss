@@ -1,0 +1,8 @@
+.picker {
+  text-align: left!important;
+}
+
+.class-name {
+  margin-bottom: 30rpx;
+}
+

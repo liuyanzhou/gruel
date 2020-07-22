@@ -1,0 +1,38 @@
+  <view class="class-name">
+  	<view class="cu-form-group">
+		<view class="title">课名</view>
+		<input placeholder="未填写" bindinput="changeClassName" ></input>
+	</view>
+
+  </view>
+  	<view class="cu-form-group">
+		<view class="title">教室</view>
+		<input placeholder="未填写" bindinput="changePlace" ></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">周数</view>
+		<picker mode="multiSelector" bindchange="MultiWeekChange" bindcolumnchange="MultiColumnWeekChange" header-text="选择起始-终止周数" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+			<view class="picker">
+				{{multiArray[0][multiWeekIndex[0]]}}-{{multiArray[1][multiWeekIndex[1]]}} 周
+			</view>
+		</picker>
+	</view>
+
+  	<view class="cu-form-group">
+		<view class="title">节数</view>
+		<picker mode="multiSelector" bindchange="MultiSecChange" bindcolumnchange="selectSection" header-text="选择起始-终止节数" value="{{selectSectionArrIndex}}"
+		 range="{{selectSectionArr}}">
+			<view class="picker" >
+        	{{selectSectionArr[0][selectSectionArrIndex[0]]}}  /  {{selectSectionArr[1][selectSectionArrIndex[1]]}}-{{selectSectionArr[2][selectSectionArrIndex[2]]}} 节
+			</view>
+		</picker>
+	</view>
+   	<view class="cu-form-group">
+		<view class="title">老师</view>
+		<input placeholder="未填写" bindinput="changeTeacher"></input>
+	</view>
+
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-green lg" style="width:100%;" bindtap="addClassInfo" >添加</button>
+</view>
